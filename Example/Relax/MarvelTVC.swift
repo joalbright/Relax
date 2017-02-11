@@ -20,7 +20,7 @@ class MarvelTVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        MarvelAPI.session().request(MarvelAPI.Endpoints.Characters.endpoint) {
+        MarvelAPI.session().request(MarvelAPI.Endpoints.characters.endpoint) {
                         
             guard let data = $0.0?["data"] as? [String:Any] else { return }
             

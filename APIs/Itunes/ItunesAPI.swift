@@ -22,6 +22,8 @@ open class ItunesAPI: API {
         
         baseURL = "https://itunes.apple.com/"
         
+        ItunesSearch.session = self
+        
     }
 
     public enum Endpoints: String {

@@ -34,7 +34,7 @@ class InstagramCVC: UICollectionViewController {
     
     func loadMedia() {
         
-        var media = InstagramAPI.Endpoints.UsersMyMedia.endpoint
+        var media = InstagramAPI.Endpoints.usersMyMedia.endpoint
         
         // 1117765869475060984_6261910
         //  970209583255379454_6261910

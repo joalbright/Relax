@@ -34,7 +34,7 @@ class FoursquareVC: UIViewController {
     
     func loadVenues() {
         
-        var explore = FoursquareAPI.Endpoints.VenuesExplore.endpoint
+        var explore = FoursquareAPI.Endpoints.venuesExplore.endpoint
         
         explore.parameters = ["near" : "atlanta"]
         

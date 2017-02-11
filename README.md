@@ -57,7 +57,7 @@ RESTful API endpoint manager
 
 #### Features
 
-- [ ] Response Object Structure (still dreaming this up)
+- [x] ~~Response Object Structure~~ *docs coming soon*
 - [x] ~~Authentication Structure~~ *docs coming soon*
 
 ## Usage

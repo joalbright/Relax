@@ -25,7 +25,7 @@ class GitHubTests: XCTestCase {
         
         // setup endpoint
         
-        var profile = GitHubAPI.Endpoints.UsersNamed.endpoint
+        var profile = GitHubAPI.Endpoints.usersNamed.endpoint
         
         profile.pathpieces = ["username" : "joalbright"]
         
@@ -53,7 +53,7 @@ class GitHubTests: XCTestCase {
         
         // setup endpoint
         
-        var profile = GitHubAPI.Endpoints.SearchUsers.endpoint
+        var profile = GitHubAPI.Endpoints.searchUsers.endpoint
         
         profile.parameters = ["q" : "joalbright"]
         

@@ -27,7 +27,7 @@ class ItunesTests: XCTestCase {
         
         // setup endpoint
         
-        var search = ItunesAPI.Endpoints.Search.endpoint
+        var search = ItunesAPI.Endpoints.search.endpoint
         
         search.parameters = ["term" : "daft+punk"]
         
@@ -57,7 +57,7 @@ class ItunesTests: XCTestCase {
         
         // setup endpoint
         
-        var search = ItunesAPI.Endpoints.Lookup.endpoint
+        var search = ItunesAPI.Endpoints.lookup.endpoint
         
         search.parameters = ["id" : "5468295"]
         

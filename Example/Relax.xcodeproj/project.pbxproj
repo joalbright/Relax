@@ -17,7 +17,6 @@
 		A912428E1E3BF80000FF0597 /* Relax.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91242891E3BF80000FF0597 /* Relax.swift */; };
 		A912428F1E3BF80000FF0597 /* RelaxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912428A1E3BF80000FF0597 /* RelaxAPI.swift */; };
 		A91242901E3BF80000FF0597 /* RelaxEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912428B1E3BF80000FF0597 /* RelaxEndpoint.swift */; };
-		A91242BA1E4A738000FF0597 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91242B91E4A738000FF0597 /* CryptoSwift.framework */; };
 		A91242BB1E4A73AF00FF0597 /* RelaxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A912428A1E3BF80000FF0597 /* RelaxAPI.swift */; };
 		A91242BD1E4A73C000FF0597 /* Defaultable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91242871E3BF80000FF0597 /* Defaultable.swift */; };
 		A91242C11E4A73CF00FF0597 /* Relax.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91242891E3BF80000FF0597 /* Relax.swift */; };
@@ -73,6 +72,12 @@
 		A9E839F21E4E4F5500BF5AB9 /* ParsableOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EA1E4E4BE600BF5AB9 /* ParsableOperators.swift */; };
 		A9E839F31E4E4F5500BF5AB9 /* Savable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EB1E4E4BE600BF5AB9 /* Savable.swift */; };
 		A9E839F41E4E4F5500BF5AB9 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EC1E4E4BE600BF5AB9 /* Serializable.swift */; };
+		A9E839F61E4EC96700BF5AB9 /* RelaxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839F51E4EC96700BF5AB9 /* RelaxObject.swift */; };
+		A9E839FA1E4ECCF900BF5AB9 /* ItunesSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839F91E4ECCF900BF5AB9 /* ItunesSearch.swift */; };
+		A9E839FC1E4ECE9400BF5AB9 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91242B91E4A738000FF0597 /* CryptoSwift.framework */; };
+		A9E839FD1E4ECE9400BF5AB9 /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A91242B91E4A738000FF0597 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A9E839FF1E4ED58A00BF5AB9 /* ItunesSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839F91E4ECCF900BF5AB9 /* ItunesSearch.swift */; };
+		A9E83A001E4ED5A500BF5AB9 /* RelaxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839F51E4EC96700BF5AB9 /* RelaxObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +89,20 @@
 			remoteInfo = Relax;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A9E839FE1E4ECE9400BF5AB9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A9E839FD1E4ECE9400BF5AB9 /* CryptoSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		607FACD01AFB9204008FA782 /* Relax_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relax_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +133,7 @@
 		A98CE6791C461D380089323F /* GoogleAnalyticsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnalyticsAPI.swift; sourceTree = "<group>"; };
 		A98CE67A1C461D380089323F /* GoogleMapsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsAPI.swift; sourceTree = "<group>"; };
 		A98CE67B1C461D380089323F /* InstagramAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
-		A98CE67C1C461D380089323F /* ItunesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesAPI.swift; sourceTree = "<group>"; };
+		A98CE67C1C461D380089323F /* ItunesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItunesAPI.swift; path = Itunes/ItunesAPI.swift; sourceTree = "<group>"; };
 		A98CE67D1C461D380089323F /* LinkedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedIn.swift; sourceTree = "<group>"; };
 		A98CE67E1C461D380089323F /* MarvelAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPI.swift; sourceTree = "<group>"; };
 		A98CE67F1C461D380089323F /* MeetupAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetupAPI.swift; sourceTree = "<group>"; };
@@ -134,6 +153,8 @@
 		A9E839EA1E4E4BE600BF5AB9 /* ParsableOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParsableOperators.swift; path = ../Carthage/Checkouts/Parsable/Sources/ParsableOperators.swift; sourceTree = "<group>"; };
 		A9E839EB1E4E4BE600BF5AB9 /* Savable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Savable.swift; path = ../Carthage/Checkouts/Parsable/Sources/Savable.swift; sourceTree = "<group>"; };
 		A9E839EC1E4E4BE600BF5AB9 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serializable.swift; path = ../Carthage/Checkouts/Parsable/Sources/Serializable.swift; sourceTree = "<group>"; };
+		A9E839F51E4EC96700BF5AB9 /* RelaxObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RelaxObject.swift; path = ../Sources/RelaxObject.swift; sourceTree = "<group>"; };
+		A9E839F91E4ECCF900BF5AB9 /* ItunesSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItunesSearch.swift; path = Itunes/ItunesSearch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91242BA1E4A738000FF0597 /* CryptoSwift.framework in Frameworks */,
+				A9E839FC1E4ECE9400BF5AB9 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +252,7 @@
 				A91242891E3BF80000FF0597 /* Relax.swift */,
 				A912428A1E3BF80000FF0597 /* RelaxAPI.swift */,
 				A912428B1E3BF80000FF0597 /* RelaxEndpoint.swift */,
+				A9E839F51E4EC96700BF5AB9 /* RelaxObject.swift */,
 			);
 			name = Relax;
 			sourceTree = "<group>";
@@ -270,7 +292,7 @@
 				A98CE6771C461D380089323F /* GitHubAPI.swift */,
 				A98CE6781C461D380089323F /* Google */,
 				A98CE67B1C461D380089323F /* InstagramAPI.swift */,
-				A98CE67C1C461D380089323F /* ItunesAPI.swift */,
+				A9E839F71E4ECCC200BF5AB9 /* Itunes */,
 				A98CE67D1C461D380089323F /* LinkedIn.swift */,
 				A9E839E71E4E128300BF5AB9 /* MartaAPI.swift */,
 				A98CE67E1C461D380089323F /* MarvelAPI.swift */,
@@ -307,6 +329,23 @@
 			name = "API Controllers";
 			sourceTree = "<group>";
 		};
+		A9E839F71E4ECCC200BF5AB9 /* Itunes */ = {
+			isa = PBXGroup;
+			children = (
+				A98CE67C1C461D380089323F /* ItunesAPI.swift */,
+				A9E839F81E4ECCD000BF5AB9 /* Models */,
+			);
+			name = Itunes;
+			sourceTree = "<group>";
+		};
+		A9E839F81E4ECCD000BF5AB9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9E839F91E4ECCF900BF5AB9 /* ItunesSearch.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,6 +356,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
+				A9E839FE1E4ECE9400BF5AB9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -433,6 +473,7 @@
 				A98CE6851C461D380089323F /* FlickrAPI.swift in Sources */,
 				A98CE68C1C461D380089323F /* LinkedIn.swift in Sources */,
 				A98CE6901C461D380089323F /* SlackAPI.swift in Sources */,
+				A9E839F61E4EC96700BF5AB9 /* RelaxObject.swift in Sources */,
 				A9A74D5A1C493AD5006C3183 /* LinkedInTVC.swift in Sources */,
 				A9A74D621C493B5B006C3183 /* ItunesTVC.swift in Sources */,
 				A912428D1E3BF80000FF0597 /* Loginable.swift in Sources */,
@@ -446,6 +487,7 @@
 				A9A74D601C493B45006C3183 /* InstagramCVC.swift in Sources */,
 				A98CE68F1C461D380089323F /* PinterestAPI.swift in Sources */,
 				A98CE6921C461D380089323F /* UberAPI.swift in Sources */,
+				A9E839FA1E4ECCF900BF5AB9 /* ItunesSearch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +498,7 @@
 				A9E839F41E4E4F5500BF5AB9 /* Serializable.swift in Sources */,
 				A91242BB1E4A73AF00FF0597 /* RelaxAPI.swift in Sources */,
 				A942F19E1C482D160087C7CC /* InstagramTests.swift in Sources */,
+				A9E839FF1E4ED58A00BF5AB9 /* ItunesSearch.swift in Sources */,
 				A951A9331C4565290037CDF1 /* FoursquareTests.swift in Sources */,
 				A98CE6A01C461D470089323F /* TwitterAPI.swift in Sources */,
 				A98CE69F1C461D470089323F /* SlackAPI.swift in Sources */,
@@ -473,6 +516,7 @@
 				A91242C11E4A73CF00FF0597 /* Relax.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* GitHubTests.swift in Sources */,
 				A98CE69C1C461D470089323F /* MarvelAPI.swift in Sources */,
+				A9E83A001E4ED5A500BF5AB9 /* RelaxObject.swift in Sources */,
 				A98CE69B1C461D470089323F /* LinkedIn.swift in Sources */,
 				A98CE6981C461D470089323F /* GoogleMapsAPI.swift in Sources */,
 				A951A9051C45344A0037CDF1 /* Keys.swift in Sources */,

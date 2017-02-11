@@ -10,7 +10,7 @@ import UIKit
 
 class ItunesTVC: UITableViewController {
     
-    var items: [ParsedInfo] = []
+    var items: [ItunesMedia] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,19 +28,16 @@ class ItunesTVC: UITableViewController {
     
     func search(_ term: String, entity: String) {
         
-        var search = ItunesAPI.Endpoints.Search.endpoint
+        var search = ItunesAPI.Endpoints.search.endpoint
         
-        search.parameters = ["term" : term, "entity": entity]
+        search.parameters = ["term" : term, "entity" : entity]
         
-        ItunesAPI.session().request(search) {
+        ItunesSearch.makeRequest(search) {
             
-            guard let info = $0.0 else { return }
-            
-            self.items = info["results"] as? [[String:Any]] ?? []
+            self.items = $0.results
             self.tableView.reloadData()
             
         }
-
         
     }
     
@@ -52,8 +49,8 @@ class ItunesTVC: UITableViewController {
         
         let item = items[indexPath.row]
         
-        cell.textLabel?.text = item["collectionName"] as? String
-        cell.detailTextLabel?.text = item["artistName"] as? String
+        cell.textLabel?.text = item.collectionName
+        cell.detailTextLabel?.text = item.artistName
         
         return cell
         

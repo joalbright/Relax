@@ -27,7 +27,7 @@ class FoursquareTests: XCTestCase {
         
         // setup endpoint
         
-        var atlanta = FoursquareAPI.Endpoints.VenuesSearch.endpoint
+        var atlanta = FoursquareAPI.Endpoints.venuesSearch.endpoint
         
         atlanta.parameters = ["near": "atlanta", "query": "coffee"]
         

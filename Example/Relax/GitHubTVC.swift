@@ -34,7 +34,7 @@ class GitHubTVC: UITableViewController {
     
     func loadMyGists() {
         
-        GitHubAPI.session().request(GitHubAPI.Endpoints.GistsMe.endpoint) {
+        GitHubAPI.session().request(GitHubAPI.Endpoints.gistsMe.endpoint) {
             
             print($0.0 ?? [:])
             // update tableview with list of gists
