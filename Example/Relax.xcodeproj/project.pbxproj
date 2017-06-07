@@ -64,12 +64,8 @@
 		A9A74D641C493B81006C3183 /* GitHubTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A74D631C493B81006C3183 /* GitHubTVC.swift */; };
 		A9A74D661C493BB2006C3183 /* FoursquareVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A74D651C493BB2006C3183 /* FoursquareVC.swift */; };
 		A9E839E81E4E128300BF5AB9 /* MartaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839E71E4E128300BF5AB9 /* MartaAPI.swift */; };
-		A9E839ED1E4E4BE600BF5AB9 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839E91E4E4BE600BF5AB9 /* Parsable.swift */; };
-		A9E839EE1E4E4BE600BF5AB9 /* ParsableOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EA1E4E4BE600BF5AB9 /* ParsableOperators.swift */; };
 		A9E839EF1E4E4BE600BF5AB9 /* Savable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EB1E4E4BE600BF5AB9 /* Savable.swift */; };
 		A9E839F01E4E4BE600BF5AB9 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EC1E4E4BE600BF5AB9 /* Serializable.swift */; };
-		A9E839F11E4E4F5500BF5AB9 /* Parsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839E91E4E4BE600BF5AB9 /* Parsable.swift */; };
-		A9E839F21E4E4F5500BF5AB9 /* ParsableOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EA1E4E4BE600BF5AB9 /* ParsableOperators.swift */; };
 		A9E839F31E4E4F5500BF5AB9 /* Savable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EB1E4E4BE600BF5AB9 /* Savable.swift */; };
 		A9E839F41E4E4F5500BF5AB9 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EC1E4E4BE600BF5AB9 /* Serializable.swift */; };
 		A9E839F61E4EC96700BF5AB9 /* RelaxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839F51E4EC96700BF5AB9 /* RelaxObject.swift */; };
@@ -149,8 +145,6 @@
 		A9A74D631C493B81006C3183 /* GitHubTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubTVC.swift; sourceTree = "<group>"; };
 		A9A74D651C493BB2006C3183 /* FoursquareVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareVC.swift; sourceTree = "<group>"; };
 		A9E839E71E4E128300BF5AB9 /* MartaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MartaAPI.swift; sourceTree = "<group>"; };
-		A9E839E91E4E4BE600BF5AB9 /* Parsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parsable.swift; path = ../Carthage/Checkouts/Parsable/Sources/Parsable.swift; sourceTree = "<group>"; };
-		A9E839EA1E4E4BE600BF5AB9 /* ParsableOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParsableOperators.swift; path = ../Carthage/Checkouts/Parsable/Sources/ParsableOperators.swift; sourceTree = "<group>"; };
 		A9E839EB1E4E4BE600BF5AB9 /* Savable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Savable.swift; path = ../Carthage/Checkouts/Parsable/Sources/Savable.swift; sourceTree = "<group>"; };
 		A9E839EC1E4E4BE600BF5AB9 /* Serializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Serializable.swift; path = ../Carthage/Checkouts/Parsable/Sources/Serializable.swift; sourceTree = "<group>"; };
 		A9E839F51E4EC96700BF5AB9 /* RelaxObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RelaxObject.swift; path = ../Sources/RelaxObject.swift; sourceTree = "<group>"; };
@@ -260,8 +254,6 @@
 		A91242B71E4A723100FF0597 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				A9E839E91E4E4BE600BF5AB9 /* Parsable.swift */,
-				A9E839EA1E4E4BE600BF5AB9 /* ParsableOperators.swift */,
 				A9E839EB1E4E4BE600BF5AB9 /* Savable.swift */,
 				A9E839EC1E4E4BE600BF5AB9 /* Serializable.swift */,
 			);
@@ -481,8 +473,6 @@
 				A98CE6891C461D380089323F /* GoogleMapsAPI.swift in Sources */,
 				A912428C1E3BF80000FF0597 /* Defaultable.swift in Sources */,
 				A912428F1E3BF80000FF0597 /* RelaxAPI.swift in Sources */,
-				A9E839ED1E4E4BE600BF5AB9 /* Parsable.swift in Sources */,
-				A9E839EE1E4E4BE600BF5AB9 /* ParsableOperators.swift in Sources */,
 				A98CE6881C461D380089323F /* GoogleAnalyticsAPI.swift in Sources */,
 				A9A74D601C493B45006C3183 /* InstagramCVC.swift in Sources */,
 				A98CE68F1C461D380089323F /* PinterestAPI.swift in Sources */,
@@ -502,8 +492,6 @@
 				A951A9331C4565290037CDF1 /* FoursquareTests.swift in Sources */,
 				A98CE6A01C461D470089323F /* TwitterAPI.swift in Sources */,
 				A98CE69F1C461D470089323F /* SlackAPI.swift in Sources */,
-				A9E839F21E4E4F5500BF5AB9 /* ParsableOperators.swift in Sources */,
-				A9E839F11E4E4F5500BF5AB9 /* Parsable.swift in Sources */,
 				A91242BD1E4A73C000FF0597 /* Defaultable.swift in Sources */,
 				A98CE69A1C461D470089323F /* ItunesAPI.swift in Sources */,
 				A98CE6991C461D470089323F /* InstagramAPI.swift in Sources */,

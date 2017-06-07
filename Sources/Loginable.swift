@@ -53,5 +53,19 @@ extension String {
         
     }
     
+    func md5() -> Data {
+        
+        guard let messageData = string.data(using:.utf8) else { return Data() }
+        
+        var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
+        
+        return digestData.withUnsafeMutableBytes { digestBytes in
+            
+            messageData.withUnsafeBytes { messageBytes in CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes) }
+            
+        }
+        
+    }
+    
 }
 

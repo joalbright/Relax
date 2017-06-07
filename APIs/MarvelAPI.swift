@@ -8,8 +8,6 @@
 
 
 import Foundation
-import CryptoSwift
-
 
 // Documentation : http://developer.marvel.com
 
