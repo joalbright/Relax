@@ -30,7 +30,7 @@ class InstagramCVC: UICollectionViewController {
 
     }
     
-    var photos: [ParsedInfo] = []
+    var photos: [[String:Any]] = []
     
     func loadMedia() {
         
@@ -41,11 +41,11 @@ class InstagramCVC: UICollectionViewController {
         
         media.parameters = ["count" : "50"]
         
-        InstagramAPI.session().request(media) {
+        InstagramAPI.session().request(media) { info, error in
          
-            print($0.0 ?? [:])
+            print(info ?? [:])
             
-            guard let items = $0.0?["data"] as? [[String:Any]] else { return }
+            guard let items = info?["data"] as? [[String:Any]] else { return }
             
             
             
@@ -66,8 +66,8 @@ class InstagramCVC: UICollectionViewController {
         
         DispatchQueue.global().async {
             
-            guard let images = photo["images"] as? ParsedInfo else { return }
-            guard let resolution = images["standard_resolution"] as? ParsedInfo else { return }
+            guard let images = photo["images"] as? [String:Any] else { return }
+            guard let resolution = images["standard_resolution"] as? [String:Any] else { return }
             guard let urlString = resolution["url"] as? String else { return }
             guard let url = URL(string: urlString) else { return }
             guard let data = try? Data(contentsOf: url) else { return }

@@ -14,14 +14,16 @@ public protocol ParsableRequest {
 
 }
 
-extension ParsableRequest where Self: Parsable {
+extension ParsableRequest {
     
     public static func makeRequest(_ endpoint: Endpoint, completion: @escaping (_ object: Self) -> Void) {
         
-        session?.request(endpoint) {
+        session?.request(endpoint) { info, error in
             
-            guard let info = $0.0 else { return }
-            completion(Self(info))
+            guard let info = info else { return }
+            
+            print(info)
+//            completion(Self(info))
             
         }
         
@@ -29,14 +31,8 @@ extension ParsableRequest where Self: Parsable {
     
 }
 
-public class RelaxObject: Parsable, ParsableRequest {
+public class RelaxObject: Codable, ParsableRequest {
     
     public static var session: API?
-    
-    public required init(_ info: ParsedInfo) {
-        
-        
-        
-    }
     
 }

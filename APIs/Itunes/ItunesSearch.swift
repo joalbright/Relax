@@ -60,14 +60,6 @@ class ItunesSearch: RelaxObject {
     var results: [ItunesMedia] = []
     var resultCount: Int?
     
-    required init(_ info: ParsedInfo) {
-        super.init(info)
-        
-        results <-- info["results"]
-        resultCount <-- info["resultCount"]
-        
-    }
-    
 }
 
 class ItunesMedia: RelaxObject {
@@ -95,13 +87,5 @@ class ItunesMedia: RelaxObject {
     //    releaseDate = "2013-05-17T07:00:00Z";
     //    trackCount = 14;
     //    wrapperType = collection;
-    
-    required init(_ info: ParsedInfo) {
-        super.init(info)
-        
-        artistName <-- info["artistName"]
-        collectionName <-- info["collectionName"]
-        
-    }
     
 }

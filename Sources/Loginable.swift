@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public protocol Loginable {
     
     var session: API! { get set }
@@ -26,11 +25,11 @@ extension Loginable {
         
         endpoint.parameters["code"] = code as Any?
         
-        api?.request(endpoint) {
+        api?.request(endpoint) { info, error in
             
-            print($0)
+            print(info ?? [:])
             
-            guard let info = $0.0 else { return finished(false) }
+            guard let info = info else { return finished(false) }
             guard let token = info["access_token"] as? String else { return finished(false) }
             
             api?.authToken = token
@@ -53,17 +52,20 @@ extension String {
         
     }
     
-    func md5() -> Data {
+    func md5() -> String {
         
-        guard let messageData = string.data(using:.utf8) else { return Data() }
-        
-        var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
-        
-        return digestData.withUnsafeMutableBytes { digestBytes in
-            
-            messageData.withUnsafeBytes { messageBytes in CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes) }
-            
-        }
+        return ""
+//        guard let messageData = data(using:.utf8) else { return "" }
+//
+//        var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
+//
+//        let data = digestData.withUnsafeMutableBytes { digestBytes in
+//
+//            messageData.withUnsafeBytes { messageBytes in CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes) }
+//
+//        }
+//
+//        return data.base64EncodedString()
         
     }
     

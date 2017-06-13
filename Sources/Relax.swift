@@ -22,7 +22,7 @@ open class Relax {
         guard let api = api else { throw URLError.badAPI }
         guard endpoint.satisfied else { throw URLError.badParameters }
         
-        let keys = api.authBasic.flatten("&") { "\($0)=\($1)" }
+        let keys = api.authBasic.flatten("&") { "\($0.0)=\($0.1)" }
         let query = api.authToken.isEmpty ? endpoint.query.isEmpty ? "?" + keys : endpoint.query.contains(keys) ? endpoint.query : endpoint.query + "&" + keys : endpoint.query
 
         return api.authURL + endpoint.path + query
@@ -37,7 +37,7 @@ open class Relax {
         
         for (k,v) in api.authBasic { if v == "ACCESS_TOKEN" { api.authBasic[k] = api.authToken } }
         
-        let keys = api.authBasic.flatten("&") { "\($0)=\($1)" }
+        let keys = api.authBasic.flatten("&") { "\($0.0)=\($0.1)" }
         
         let query = endpoint.query.isEmpty ? "?" + keys : endpoint.query + "&" + keys
         
@@ -51,7 +51,7 @@ open class Relax {
         
         if endpoint.method != .GET {
             
-            request.httpBody = endpoint.parameters.flatten("&") { "\($0)=\($1)" }.data(using: String.Encoding.utf8)
+            request.httpBody = endpoint.parameters.flatten("&") { "\($0.0)=\($0.1)" }.data(using: String.Encoding.utf8)
             
         }
         

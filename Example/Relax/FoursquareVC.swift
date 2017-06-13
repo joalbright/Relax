@@ -38,9 +38,9 @@ class FoursquareVC: UIViewController {
         
         explore.parameters = ["near" : "atlanta"]
         
-        FoursquareAPI.session().request(explore) {
+        FoursquareAPI.session().request(explore) { info, error in
                         
-            guard let response = $0.0?["response"] as? [String:Any] else { return }
+            guard let response = info?["response"] as? [String:Any] else { return }
             guard let groups = response["groups"] as? [[String:Any]] else { return }
             
             for group in groups {

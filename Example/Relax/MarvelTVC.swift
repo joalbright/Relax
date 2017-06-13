@@ -20,9 +20,9 @@ class MarvelTVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        MarvelAPI.session().request(MarvelAPI.Endpoints.characters.endpoint) {
+        MarvelAPI.session().request(MarvelAPI.Endpoints.characters.endpoint) { info, error in
                         
-            guard let data = $0.0?["data"] as? [String:Any] else { return }
+            guard let data = info?["data"] as? [String:Any] else { return }
             
             self.characters = data["results"] as? [[String:Any]] ?? []
             self.tableView.reloadData()
@@ -31,7 +31,7 @@ class MarvelTVC: UITableViewController {
         
     }
     
-    var characters: [ParsedInfo] = []
+    var characters: [[String:Any]] = []
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return characters.count }
     
@@ -45,7 +45,7 @@ class MarvelTVC: UITableViewController {
         
         DispatchQueue.global().async {
             
-            guard let thumbnail = character["thumbnail"] as? ParsedInfo else { return }
+            guard let thumbnail = character["thumbnail"] as? [String:Any] else { return }
             guard let path = thumbnail["path"] as? String else { return }
             guard let ext = thumbnail["extension"] as? String else { return }
             guard let url = URL(string: path + "." + ext) else { return }

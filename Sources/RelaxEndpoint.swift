@@ -33,7 +33,7 @@ public struct Endpoint {
     
     public var pathpieces: [String:String] = [:] { didSet { for (k,v) in pathpieces { path = path.replace(":" + k, v) } } }
     public var parameters: Parameters = [:]
-    public var query: String { return method == .GET && parameters.count > 0 ? "?" + parameters.flatten("&") { "\($0)=\($1)" } : "" }
+    public var query: String { return method == .GET && parameters.count > 0 ? "?" + parameters.flatten("&") { "\($0.0)=\($0.1)" } : "" }
     
     public var satisfied: Bool {
         
