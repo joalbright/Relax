@@ -33,11 +33,10 @@ class ItunesTests: XCTestCase {
         
         // run request
         
-        session().request(search) {
+        session().request(search) { info, error in
             
-            XCTAssertNil($0.1, #function + " error \($0.1)")
-            
-            XCTAssertNotNil($0.0, #function + " info nil")
+            XCTAssertNil(error, #function + " error \(String(describing: error))")
+            XCTAssertNotNil(info, #function + " info nil")
             
             expectation.fulfill()
             
@@ -53,7 +52,7 @@ class ItunesTests: XCTestCase {
         
         // singleton Itunes API
         
-        let itunesAPI = ItunesAPI.session
+        let session = ItunesAPI.session
         
         // setup endpoint
         
@@ -63,11 +62,10 @@ class ItunesTests: XCTestCase {
         
         // run request
         
-        itunesAPI().request(search) {
+        session().request(search) { info, error in
             
-            XCTAssertNil($0.1, #function + " error \($0.1)")
-            
-            XCTAssertNotNil($0.0, #function + " info nil")
+            XCTAssertNil(error, #function + " error \(String(describing: error))")
+            XCTAssertNotNil(info, #function + " info nil")
             
             expectation.fulfill()
             

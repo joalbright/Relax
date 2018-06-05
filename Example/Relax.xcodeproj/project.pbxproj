@@ -26,6 +26,7 @@
 		A951A9071C4536930037CDF1 /* ItunesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9061C4536930037CDF1 /* ItunesTests.swift */; };
 		A951A9331C4565290037CDF1 /* FoursquareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A951A9321C4565290037CDF1 /* FoursquareTests.swift */; };
 		A976A79A1C44BDF8008AFA87 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976A7991C44BDF8008AFA87 /* Keys.swift */; };
+		A9882D7B1EF047A8008AA4EF /* Loginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91242881E3BF80000FF0597 /* Loginable.swift */; };
 		A98C39C91C48756700D001D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C39C81C48756700D001D6 /* LoginViewController.swift */; };
 		A98CE6851C461D380089323F /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6751C461D380089323F /* FlickrAPI.swift */; };
 		A98CE6861C461D380089323F /* FoursquareAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98CE6761C461D380089323F /* FoursquareAPI.swift */; };
@@ -70,8 +71,6 @@
 		A9E839F41E4E4F5500BF5AB9 /* Serializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839EC1E4E4BE600BF5AB9 /* Serializable.swift */; };
 		A9E839F61E4EC96700BF5AB9 /* RelaxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839F51E4EC96700BF5AB9 /* RelaxObject.swift */; };
 		A9E839FA1E4ECCF900BF5AB9 /* ItunesSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839F91E4ECCF900BF5AB9 /* ItunesSearch.swift */; };
-		A9E839FC1E4ECE9400BF5AB9 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91242B91E4A738000FF0597 /* CryptoSwift.framework */; };
-		A9E839FD1E4ECE9400BF5AB9 /* CryptoSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A91242B91E4A738000FF0597 /* CryptoSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A9E839FF1E4ED58A00BF5AB9 /* ItunesSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839F91E4ECCF900BF5AB9 /* ItunesSearch.swift */; };
 		A9E83A001E4ED5A500BF5AB9 /* RelaxObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E839F51E4EC96700BF5AB9 /* RelaxObject.swift */; };
 /* End PBXBuildFile section */
@@ -85,20 +84,6 @@
 			remoteInfo = Relax;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A9E839FE1E4ECE9400BF5AB9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A9E839FD1E4ECE9400BF5AB9 /* CryptoSwift.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		607FACD01AFB9204008FA782 /* Relax_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Relax_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +107,7 @@
 		A951A9061C4536930037CDF1 /* ItunesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesTests.swift; sourceTree = "<group>"; };
 		A951A9321C4565290037CDF1 /* FoursquareTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareTests.swift; sourceTree = "<group>"; };
 		A976A7991C44BDF8008AFA87 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Keys.swift; path = Relax/Keys.swift; sourceTree = "<group>"; };
+		A9882D7C1EF06793008AA4EF /* Relax_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Relax_Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		A98C39C81C48756700D001D6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A98CE6751C461D380089323F /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		A98CE6761C461D380089323F /* FoursquareAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoursquareAPI.swift; sourceTree = "<group>"; };
@@ -156,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9E839FC1E4ECE9400BF5AB9 /* CryptoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +199,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				A91242B51E4A705200FF0597 /* Cartfile */,
+				A9882D7C1EF06793008AA4EF /* Relax_Example-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -348,7 +334,6 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				A9E839FE1E4ECE9400BF5AB9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -488,6 +473,7 @@
 				A9E839F41E4E4F5500BF5AB9 /* Serializable.swift in Sources */,
 				A91242BB1E4A73AF00FF0597 /* RelaxAPI.swift in Sources */,
 				A942F19E1C482D160087C7CC /* InstagramTests.swift in Sources */,
+				A9882D7B1EF047A8008AA4EF /* Loginable.swift in Sources */,
 				A9E839FF1E4ED58A00BF5AB9 /* ItunesSearch.swift in Sources */,
 				A951A9331C4565290037CDF1 /* FoursquareTests.swift in Sources */,
 				A98CE6A01C461D470089323F /* TwitterAPI.swift in Sources */,
@@ -649,12 +635,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 965FHW76SM;
 				INFOPLIST_FILE = Relax/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "co.jo2.Relax-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Relax/Relax_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};
@@ -664,12 +653,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 965FHW76SM;
 				INFOPLIST_FILE = Relax/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "co.jo2.Relax-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Relax/Relax_Example-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 			};

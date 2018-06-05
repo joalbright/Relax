@@ -33,11 +33,10 @@ class FoursquareTests: XCTestCase {
         
         // run request
         
-        session().request(atlanta) {
+        session().request(atlanta) { info, error in
             
-            XCTAssertNil($0.1, #function + " error \($0.1)")
-            
-            XCTAssertNotNil($0.0, #function + " info nil")
+            XCTAssertNil(error, #function + " error \(String(describing: error))")
+            XCTAssertNotNil(info, #function + " info nil")
             
             expectation.fulfill()
             

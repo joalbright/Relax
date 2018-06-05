@@ -31,11 +31,10 @@ class GitHubTests: XCTestCase {
         
         // run request
         
-        session().request(profile) {
+        session().request(profile) { info, error in
             
-            XCTAssertNil($0.1, #function + " error \($0.1)")
-            
-            XCTAssertNotNil($0.0, #function + " info nil")
+            XCTAssertNil(error, #function + " error \(String(describing: error))")
+            XCTAssertNotNil(info, #function + " info nil")
             
             expectation.fulfill()
             
@@ -49,7 +48,7 @@ class GitHubTests: XCTestCase {
         
         let expectation = self.expectation(description: #function + " asynchronous request")
         
-        let githubAPI = GitHubAPI.session
+        let session = GitHubAPI.session
         
         // setup endpoint
         
@@ -59,11 +58,10 @@ class GitHubTests: XCTestCase {
         
         // run request
         
-        githubAPI().request(profile) {
+        session().request(profile) { info, error in
             
-            XCTAssertNil($0.1, #function + " error \($0.1)")
-            
-            XCTAssertNotNil($0.0, #function + " info nil")
+            XCTAssertNil(error, #function + " error \(String(describing: error))")
+            XCTAssertNotNil(info, #function + " info nil")
             
             expectation.fulfill()
             

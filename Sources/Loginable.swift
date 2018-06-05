@@ -41,6 +41,16 @@ extension Loginable {
     
 }
 
+extension Data {
+    
+    func hexString() -> String {
+        
+        return map { String(format: "%02hhx", $0) }.joined()
+        
+    }
+    
+}
+
 extension String {
     
     func param(_ param: String) -> String? {
@@ -54,19 +64,21 @@ extension String {
     
     func md5() -> String {
         
-        return ""
-//        guard let messageData = data(using:.utf8) else { return "" }
-//
+        return self
+//        let messageData = data(using:.utf8)!
 //        var digestData = Data(count: Int(CC_MD5_DIGEST_LENGTH))
 //
-//        let data = digestData.withUnsafeMutableBytes { digestBytes in
+//        _ = digestData.withUnsafeMutableBytes { digestBytes in
 //
-//            messageData.withUnsafeBytes { messageBytes in CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes) }
+//            messageData.withUnsafeBytes { messageBytes in
+//
+//                CC_MD5(messageBytes, CC_LONG(messageData.count), digestBytes)
+//
+//            }
 //
 //        }
 //
-//        return data.base64EncodedString()
-        
+//        return digestData.hexString()
     }
     
 }

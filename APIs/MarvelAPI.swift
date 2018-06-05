@@ -204,4 +204,3 @@ open class MarvelAPI: API {
     }
     
 }
-
